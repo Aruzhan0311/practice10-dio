@@ -1,3 +1,4 @@
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_9/bloc/auth_bloc.dart';
@@ -48,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ],
     ),
     AlbumPage(),
-    Text('Messages'),
+    QrPage(),
     Text('Profile'),
   ];
 
@@ -119,6 +120,20 @@ class AlbumPage extends StatelessWidget {
           }
           return Offstage();
         },
+      ),
+    );
+  }
+}
+
+class QrPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(),
+        body: Center(
+          child: Image.asset('assets/frame.png'),
+        ),
       ),
     );
   }
